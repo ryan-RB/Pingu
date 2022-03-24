@@ -7,7 +7,7 @@ const suivant = document.querySelector('.right');
 const precedent = document.querySelector('.left');
 let count = 0;
 let btnPingu = document.getElementById("Noot");
-const music = new Audio('/assets/nootnoot.m4a')
+const music = new Audio('./assets/nootnoot.m4a')
 //cliquez sur la tête du Pingu
 const JouerSon = () => {
     music.play();

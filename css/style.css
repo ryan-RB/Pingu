@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Pingu";
-  src: url("/fonts/Pingu.ttf");
+  src: url("./fonts/Pingu.ttf");
  }
 /* reset */
 html{

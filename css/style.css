@@ -41,6 +41,11 @@ h1{
     font-style: bold;
     color: aliceblue;
 }
+header h1 img{
+  max-height: 7rem;
+  max-width: 7rem;
+  margin-right: 2rem;
+} 
 *, ::before, ::after {
     margin: 0;
     padding: 
@@ -55,7 +60,7 @@ h1{
     max-height: 60.0rem;
     margin: 5rem auto;
     border: 1rem solid #fff;
-    box-shadow: 0 1.0rem 1.0rem rgba(0,0,0,0.3);
+    box-shadow: 0 1.0rem 1.0rem rgba(0, 0, 0, 0.753);
   }
   .slider img {
     max-width: 100%;
@@ -85,4 +90,8 @@ h1{
     font-size: 5.0rem;
     margin: 1rem 3rem;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  .btn-nav:hover{
+    transform: scale(1.4);
   }

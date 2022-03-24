@@ -4,26 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slide</title>
+    <link rel="icon" href="./assets/ping.png">
+    <title>Slider - Pingu</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <h1>Pingu</h1>
+  <header>
+    <h1><img src="./assets/ping.png" id="Noot">Pingu</h1>
+  </header>
   <!-- optimiser pour le SEO et l'accessibilité 5/10 -->
   <main class="container">
 
-    <span class="slider">
-        <img class="active" src="./assets/pingu_arrosoir.jpg" alt="Pingu Arrosoire" />
-        <img class="active" src="./assets/Pingu_Musique.jpg" alt="Pingu Musique">
-        <img class="active" src="./assets/Pingu_arme.png" alt="Pingu Gun">
-    </span>
+    <section class="slider">
+        <ul>
+          <li><img class="active" src="./assets/pingu_arrosoir.jpg" alt="Pingu Arrosoire" /></li>
+          <li><img src="./assets/Pingu_Musique.jpg" alt="Pingu Musique"></li>
+          <li><img src="./assets/Pingu_arme.png" alt="Pingu Gun"></li>
+          <li><img src="./assets/174_audiovisual_movie_500_8e4_4038fdb4b6a6d0e0c6f297271f_movies-293568-21833341.jpg" alt="Phoque"></li>
+          <li><img src="./assets/2H7WmX4O_400x400.jpg" alt="Pingu Colère"></li>
+          <li><img src="./assets/3519.webp" alt="Pingu Oeuf"></li>
+          <li><img src="./assets/AAAABUN6H2Ec1Ds2JhgIFFC6SyViQMr9cUGDU-NOjPSrkvlmO8LJhk0vQyY8ODa2qZjtq0DR6bzg5x4EexuhCerVKaEcJrqt.jpg" alt="Pingu Qui Joue"></li>
+          <li><img src="./assets/40694-0-q80.jpg" alt="Pingu Coucou"></li>
+          <li><img src="./assets/get-set-go-pingu.jpg" alt="Pingu Souris"></li>
+          <li><img src="./assets/image-w1280.webp" alt="Pingu Pousse Luge"></li>
+          <li><img src="./assets/images.jpg" alt="Pingu MLG"></li>
+          <li><img src="./assets/telerama_014195_001_0.jpg" alt="Pingu Fish"></li>
+        </ul>
+    </section>
 
-    <span class="cont-btn">
+    <div role="region" aria-label="button" class="cont-btn">
       <button class="btn-nav left">&lsaquo;</button>
       <button class="btn-nav right">&rsaquo;</button>
-    </span>
+    </div>
     <!-- https://codepen.io/Ziratsu/pen/abdoNgq -->
 </main>
-    <script src="./js/app.js" defer></script>
+    <script src="./js/app.js"></script>
 </body>
 </html>

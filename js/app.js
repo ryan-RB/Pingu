@@ -1,50 +1,55 @@
 document.addEventListener("DOMContentLoaded", () =>{
+console.log("JS Loaded")
 
-const items = document.querySelectorAll('img');
+const items = document.querySelectorAll('li img');
 const nbSlide = items.length;
 const suivant = document.querySelector('.right');
 const precedent = document.querySelector('.left');
 let count = 0;
+let btnPingu = document.getElementById("Noot");
+const music = new Audio('/assets/nootnoot.m4a')
+//cliquez sur la tête du Pingu
+const JouerSon = () => {
+    music.play();
+}
 
-let slideSuivante = () => {
+btnPingu.addEventListener('click',JouerSon)
+
+let sliderApp = ({
+    
+    slideSuivante () {
     items[count].classList.remove('active');
 
-    if(count < nbSlide - 1){
-        count++;
-    } else {
-        count = 0;
-    }
+    count < nbSlide - 1 ? count++ : count = 0;
 
     items[count].classList.add('active')
     console.log(count);
     
-}
-suivant.addEventListener('click', slideSuivante)
+},
 
-
-let slidePrecedente = () => {
+slidePrecedente () {
     items[count].classList.remove('active');
 
-    if(count > 0){
-        count--;
-    } else {
-        count = nbSlide - 1;
-    }
+    count > 0 ? count-- : count = nbSlide - 1;
 
     items[count].classList.add('active')
-    // console.log(count);
     
-}
-precedent.addEventListener('click', slidePrecedente)
+},
 
-let keyPress = (e) => {
+keyPress (e) {
     console.log(e);
     
     if(e.keyCode === 37){
-        slidePrecedente();
+        sliderApp.slidePrecedente();
     } else if(e.keyCode === 39){
-        slideSuivante();
-    }
-}
-document.addEventListener('keydown', keyPress)
+        sliderApp.slideSuivante();
+    }}
+
+
+})
+
+suivant.addEventListener('click', sliderApp.slideSuivante)
+precedent.addEventListener('click', sliderApp.slidePrecedente)
+document.addEventListener('keydown', sliderApp.keyPress)
+
 })
